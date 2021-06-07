@@ -7,6 +7,7 @@ const videoRoutes = require('./routes/videoRoutes');
 const questionRoutes=require("./routes/mockTestRoutes");
 const authRoutes=require('./routes/authRoutes');
 const notifyRoutes=require('./routes/notifyRoutes');
+const fileRoutes=require('./routes/fileRoutes');
 env.config();
 
 mongoose.connect(
@@ -24,7 +25,8 @@ app.use(express.json())
 app.use('/api', videoRoutes);
 app.use('/api', questionRoutes);
 app.use('/api',authRoutes);
-app.use('/api',notifyRoutes)
+app.use('/api',notifyRoutes);
+app.use('/api',fileRoutes);
 app.listen(process.env.PORT, () => {
     console.log(`Server is running on port ${process.env.PORT}`);
 });
