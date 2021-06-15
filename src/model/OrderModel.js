@@ -26,7 +26,7 @@ const OrderSchema = new mongoose.Schema(
       required: true,
       trim: true,
     },
-    town: {
+    city: {
       type: String,
       required: true,
       trim: true,
@@ -37,7 +37,7 @@ const OrderSchema = new mongoose.Schema(
       trim:true
     },
     email: {
-        type: mongoose.Schema.Types.ObjectId,ref:'User',
+        type: String,
         required: true,
         trim: true,
         index: true,
@@ -45,7 +45,8 @@ const OrderSchema = new mongoose.Schema(
     },
     
     price:{type:Number, required:true},
-    courseName:{type:String, required:true}
+    courseId:{type:String, required:true},
+    courseName:{type:String,required:true},
   },
   {
     timestamps: true,

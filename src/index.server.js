@@ -8,6 +8,7 @@ const questionRoutes=require("./routes/mockTestRoutes");
 const authRoutes=require('./routes/authRoutes');
 const notifyRoutes=require('./routes/notifyRoutes');
 const fileRoutes=require('./routes/fileRoutes');
+const orderRoutes=require('./routes/orderRoutes');
 env.config();
 
 mongoose.connect(
@@ -27,6 +28,7 @@ app.use('/api', questionRoutes);
 app.use('/api',authRoutes);
 app.use('/api',notifyRoutes);
 app.use('/api',fileRoutes);
+app.use('/api',orderRoutes);
 app.listen(process.env.PORT, () => {
     console.log(`Server is running on port ${process.env.PORT}`);
 });
