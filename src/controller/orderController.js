@@ -28,7 +28,8 @@ exports.placeOrder= (req, res) => {
         email:email,
         price:price,
         courseId:courseId,
-        courseName:courseName
+        courseName:courseName,
+        purchaseSuccessful:'no'
     });
     Order.save((error, Product) => {
         if (error) return res.status(400).json({ error });
@@ -39,7 +40,7 @@ exports.placeOrder= (req, res) => {
 exports.getCourses=(req,res)=>{
     const emailId=decodeURIComponent(req.query.email);
     console.log(emailId);
-    orderModel.find({email:emailId}).exec((err,docs) =>{
+    orderModel.find({email:emailId,purchaseSuccessful:'yes'}).exec((err,docs) =>{
         console.log(err);
         console.log("Course Success")
         // console.log(docs);

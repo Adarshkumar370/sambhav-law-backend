@@ -47,6 +47,7 @@ const OrderSchema = new mongoose.Schema(
     price:{type:Number, required:true},
     courseId:{type:String, required:true},
     courseName:{type:String,required:true},
+    purchaseSuccessful:{type:String,required:true}
   },
   {
     timestamps: true,
