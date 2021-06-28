@@ -3,32 +3,32 @@ const OrderSchema = new mongoose.Schema(
   {
     firstName: {
       type: String,
-      required: true,
+      
       trim: true,
     },
     lastName: {
       type: String,
       trim: true,
-      required: true,
+     
     },
     addressl1: {
       type: String,
-      required: true,
+      
       trim: true,
     },
     addressl2: {
       type: String,
-      required: true,
+      
       trim: true,
     },
     postCode: {
       type: String,
-      required: true,
+     
       trim: true,
     },
     city: {
       type: String,
-      required: true,
+      
       trim: true,
     },
     phoneNo: {
@@ -44,7 +44,7 @@ const OrderSchema = new mongoose.Schema(
         lowercase: true
     },
     
-    price:{type:Number, required:true},
+    price:{type:Number},
     courseId:{type:String, required:true},
     courseName:{type:String,required:true},
     purchaseSuccessful:{type:String,required:true}

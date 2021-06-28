@@ -29,7 +29,7 @@ exports.placeOrder= (req, res) => {
         price:price,
         courseId:courseId,
         courseName:courseName,
-        purchaseSuccessful:'no'
+        purchaseSuccessful:'yes'
     });
     Order.save((error, Product) => {
         if (error) return res.status(400).json({ error });
