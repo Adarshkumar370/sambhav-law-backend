@@ -2,7 +2,7 @@ const path = require('path');
 
 exports.sendFile=(req,res)=>{
     var options = {
-        root: path.join(__dirname ,'..\\uploads\\files\\25')
+        root: path.join(__dirname ,'..','uploads','files','25')
     };
     console.log(options);
       
